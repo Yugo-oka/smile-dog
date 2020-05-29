@@ -1,0 +1,151 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page</title>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="./js/jquery.min.js"></script>
+<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+<link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="menu">
+        <div class="scroll-down">
+            Scroll Down
+        </div>
+        <img src="img/cooltext-357206705019809.png" alt="">
+        <ul>
+            <li><a href="">RECOMENDATION</a></li>
+            <li><a href="">STORY OF DOG</a></li>
+            <li><a href="">CONTACT</a></li>
+        </ul>
+    </div>
+    <div class="banner-text">
+        <div class="left-wrapper">
+            <h1>世界の犬を笑顔にするために</h1>
+            <p>To make dogs around the world smile</p>
+        </div>
+        <div class="right-wrapper">
+        </div>
+    </div>
+    <div class="contents-01">
+        <h2 class="fadein">How to make a smile of dog</h2>
+        <h6 class="fadein">CONCEPT</h6>
+
+        <div class="contents-menu-01 fadein">
+            <div class="life">
+            <h1>あなたの毎日に愛犬との散歩を</h1>
+            <h2 class="width">これまでの「散歩」にフォーカスし、</h2>
+            <h2 class="width">ここでしか知る事ができない</h2>
+            <h2 class="width">新しい「散歩」の楽しみ方をお伝えします。</h2>
+            </div>
+            <div class="contents-right-01">
+                <img src="./img/dog-659856_1280.jpg" class="vertical-img">
+                <h4>Take a walk with your dog every day</h4>
+                <p>
+                    Focusing on walking with dogs so far,<br />
+                    you can only know here,<br />
+                    and propose new ways of walking with your dog.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="contents-02 fadein">
+        <div class="contents-menu-02">
+            <img src="./img/dog-2848295_1280.jpg" class="side-img">
+            <div class="contents-right-02">
+                <h3>犬はカーミングシグナルの一環として、喜びの感情を伝えようと笑うことがあります。カーミングシグナルとは犬自身の感情を相手に伝えたり、相手を落ち着かせたりするためにとる行動です。</h4><br><br>
+                <p>
+                    Dogs may laugh to convey feelings of joy as part of the calming signal. A calming signal is an action taken to convey the feelings of the dog or to calm the other person.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="sub-menu fadein">
+        <div class="sub-menu-left">
+            <h3>
+                あまり知られていませんが、<br />
+                犬が持つ驚くべき能力は<br />
+                数え切れないほどあります。
+            </h3>
+            <p>
+                Although rarely known,<br />
+                There are countless amazing abilities that dogs have.<br />
+                Stress relieving, relaxing, anti-aging, slimming, and more.
+            </p>
+        </div>
+        <div class="sub-menu-right">
+            <ul>
+                <li>飼い主さんの妊娠を察知する</li>
+                <li>地震が来るのが分かる</li>
+                <li>飼い主さんの「嫌いな人」が分かる</li>
+                <li>ガンや糖尿病を発見できる</li>
+                <li>飼い主さんの「悲しみ」を察知する</li>
+                <li>病気の兆候を教えてくれる</li>
+                <li>人間の正しい行いを判断できる</li>
+                <li>人間の“敵意”を感じることができる</li>
+                <li>飼い主のストレスを軽減できる</li>
+                <li>赤ちゃんの面倒をみてくれる</li>
+                <li>人の匂いを追跡する事ができる</li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        <p></p>
+    </footer>
+
+    <!-- 以下JS -->
+    <p id="page-top"><a href="">↑</a></p>
+    <div id="stalker"></div>
+    <script>
+        const stalker = document.getElementById('stalker'); 
+        document.addEventListener('mousemove', function (e) {
+            stalker.style.transform = 'translate(' + e.clientX + 'px, ' + e.clientY + 'px)';
+        });
+
+        $(function(){
+            // fadein
+            $(window).scroll(function (){
+                $('.fadein').each(function(){
+                    let targetElement = $(this).offset().top;
+                    let scroll = $(window).scrollTop();
+                    let windowHeight = $(window).height();
+                    if (scroll > targetElement - windowHeight + 200){
+                        $(this).css('opacity','1');
+                        $(this).css('transform','translateY(0)');
+                    }
+                });
+            });
+
+            // ページTOPに戻る
+            let topBtn = $('#page-top');    
+            topBtn.hide();
+
+            // スクロールダウン文言
+            let scrollDown = $('.scroll-down');
+            scrollDown.show();
+            
+            //スクロールが100に達したらボタン表示
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 100) {
+                    topBtn.fadeIn();
+                    scrollDown.fadeOut();
+                } else {
+                    topBtn.fadeOut();
+                    scrollDown.fadeIn();
+                }
+            });
+
+            //スクロールしてトップ
+            topBtn.click(function () {
+                $('body,html').animate({
+                    scrollTop: 0
+                }, 500);
+                return false;
+            });
+        });
+    </script>
+</body>
+</html>

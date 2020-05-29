@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.scroll-down {
+    font-size: 12px;
+    font-weight: 100;
+    letter-spacing: 0;
+    color: #79726e;
+    bottom: 50px;
+    right: 0;
+    position: absolute;
+    transform:rotate(90deg);
+}
+.scroll-down::after {
+    content: '';
+    display: inline-block;
+    background: #79726e;
+    height: 1px;
+    width: 50px;
+    margin:0 0 2px 0;
+}
+
+/* js */
+.fadein {
+    opacity : 0;
+    transform: translateY(20px);
+    transition: all 1s;
+}
+#page-top a {
+    display: block;
+    width: 50px;
+    height: 50px;
+    font-size: 15px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    padding: 12px 0 0 0;
+    border: 1px solid #fff;
+    transition: .5s;
+    right: 50px;
+    bottom: 50px;
+    position: fixed;
+}
+#page-top a:hover {
+    opacity: .5;
+}
+#stalker {
+    pointer-events: none;
+    position: fixed;
+    top: -8px;
+    left: -8px;
+    width: 30px;
+    height: 30px;
+    background: rgba(0,0,0,.1);
+    border-radius: 50%;
+    transform: translate(0,0);
+    transition: transform 0.2s;
+    transition-timing-function: ease-out;
+    z-index: 999;
+}
+/* js */
+
+body {
+    font-family: sans-serif;
+    width: 100%;
+    height: 100vh;
+    background: black;
+}
+.menu {
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/animal-3786987_1280.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.menu img {
+    height: 25px;
+    cursor: pointer;
+    left: 60px;
+    top: 50px;
+    position: fixed;
+}
+.menu ul {
+    display: inline-flex;
+    color: #fff;
+    list-style: none;
+    right: 60px;
+    top: 0;
+    position: fixed;
+    z-index: 1;
+}
+.menu ul li {
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 100;
+    cursor: pointer;
+    font-size: 11px;
+    letter-spacing: 2px;
+    padding: 10px 20px;
+    border-right: 1px solid #ccc;
+    box-sizing: border-box;
+    transition: .5s;
+}
+.menu ul li:hover {
+    opacity: .4;
+}
+.menu ul li:first-child {
+    border-left: 1px solid #ccc;
+}
+.menu ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+.banner-text {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    height: 0;
+    color: #fff;
+    left: 150px;
+    bottom: 450px;
+    position: relative;
+}
+.banner-text .left-wrapper h1 {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 20px;
+    font-weight: 100;
+    letter-spacing: 10px;
+    opacity: .7;
+}
+.banner-text .left-wrapper p {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 14px;
+    margin: 20px 0 50px;
+    letter-spacing: 2px;
+    opacity: .5;
+}
+.banner-text .right-wrapper img {
+    width: 35vw;
+    right: 100px;
+    bottom: 85px;
+    position: relative;
+}
+.contents-01 {
+    width: 75%;
+    margin: 150px auto 100px;
+}
+.contents-01 h2 {
+    display: block;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 18px;
+    text-align: center;
+    margin: 0 0 100px 0;
+    color: #fff;
+    letter-spacing: 3px;
+}
+.contents-01 h6 {
+    display: block;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 12px;
+    margin: 0 0 50px 0;
+    color: #fff;
+    letter-spacing: 3px;
+    padding-left: 60px;
+}
+.contents-menu-01 {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 100px 0;
+}
+.contents-right-01 {
+    width: 70%;
+    margin: 0 0 0 50px;
+}
+.contents-right-01 .vertical-img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    margin: 0 0 30px 0;
+}
+.contents-01 .vertical-text-jp {
+    width: 190px;
+}
+.contents-01 h4 {
+    display: block;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 17px;
+    text-align: left;
+    color: #7b7977;
+    letter-spacing: 1px;
+    margin: 0 0 20px 0 ;
+}
+.contents-01 p {
+    display: block;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 12px;
+    line-height: 2.5em;
+    text-align: left;
+    color: #7b7977;
+    letter-spacing: 1px;
+}
+.contents-02 {
+    width: 75%;
+    margin: 150px auto 100px 0;
+}
+.contents-menu-02 {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 100px 0;
+}
+.contents-right-02 {
+    width: 100%;
+    margin: 0 0 0 60px;
+}
+.contents-menu-02 .side-img {
+    width: 75%;
+    height: 400px;
+    object-fit: cover;
+    margin: 0 0 50px 0;
+}
+.contents-right-02 .side-text-jp {
+    width: 100%;
+    margin: 0 0 30px 0;
+}
+.contents-02 {
+    display: block;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 11px;
+    line-height: 2.5em;
+    text-align: left;
+    color: #ffffff;
+    letter-spacing: 1px;
+
+}
+.sub-menu {
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+    margin: 0 auto 100px;
+    padding: 75px;
+    border: 1px solid #7b7977;
+    box-sizing: border-box;
+}
+.sub-menu h3 {
+    display: block;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 19px;
+    letter-spacing: 4.5px;
+    line-height: 36px;
+    color: #fff;
+    letter-spacing: 3px;
+    margin: 0 0 20px 0 ;
+}
+.sub-menu p {
+    display: block;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 12px;
+    line-height: 2.5em;
+    text-align: left;
+    color: #7b7977;
+    letter-spacing: 1px;
+}
+.sub-menu-right {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 15px;
+    color: #7b7977;
+    line-height: 2em;
+    letter-spacing: 1px;
+    -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+}
+footer {
+    margin: 0 0 100px 0;
+}
+footer p {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 10px;
+    text-align: center;
+    color: #fff;
+}
+
+.life{
+    color: #fff;
+    -webkit-writing-mode: vertical-rl;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    width:20%;
+}
+
+.life h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.width{
+    padding-right: 30px;
+}
